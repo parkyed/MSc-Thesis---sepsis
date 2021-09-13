@@ -1,0 +1,61 @@
+
+\documentclass{book}
+\usepackage[utf8]{inputenc}
+\usepackage{geometry}
+\usepackage{import}
+\usepackage{placeins}
+\usepackage{tikz}
+\usepackage{amsmath}
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage{graphicx}
+\graphicspath{ {./images/} }
+\usepackage{url}
+
+\geometry{
+ a4paper,
+ total={170mm,257mm},
+ left=20mm,
+ top=20mm,
+ }
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.8em}
+
+\begin{document}
+
+% pre-amble information
+\frontmatter
+\pagenumbering{roman}
+%
+\import{Preamble}{title.tex}
+\clearpage
+%
+\import{Preamble}{abstract.tex}
+\clearpage
+%
+\import{Preamble}{acknowledgements.tex}
+\clearpage
+
+\tableofcontents
+
+% main body of the document
+\mainmatter
+
+\chapter{Introduction}
+\import{Chapters/1. Introduction}{introduction.tex}
+
+\chapter{Aims and Objectives}
+\import{Chapters/2. Aims and Objectives}{aimsobjectives.tex}
+
+\backmatter
+
+\newpage
+\section{Github}
+Github Repository: \url{https://github.com/parkyed/sepsis_ml_omics_msc}
+
+\section{Appendix}
+
+\bibliographystyle{IEEEtran}
+\import{./}{bibliography.bib}
+
+\end{document}
